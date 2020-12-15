@@ -1,0 +1,71 @@
+﻿@model Workers.Web.Models.WorkerEditingModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Видалити</h2>
+
+<h3>Ви впевнені що хочете видалити цей об'єкт?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Post)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Post)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Unit)
+        </dd>
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.Exp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Exp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kharakteristika)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kharakteristika)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bio)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Видалити" class="btn btn-warning btn-sm" /> |
+            @Html.ActionLink("Назад до списку", "Index",null,new { @class = "btn btn-warning btn-sm" })
+        </div>
+    }
+</div>

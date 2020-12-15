@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Workers.Web.Models.WorkerSelectionModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Список працівників</h2>
+
+<p>
+    @Html.ActionLink("Створити нового працівника", "Create", null, new { @class = "btn btn-warning btn-sm" }) 
+    @using (Ajax.BeginForm("DeleteAll", new AjaxOptions { UpdateTargetId = "data", Confirm = "Ви дійсно хочете видалити всіх працівників?" }))
+    {
+        <input type="submit" value="Видалити всіх працівників" class="btn btn-warning btn-sm" />
+    }
+</p>
+
+<table class="table">
+    <thead>
+        @Html.Partial("_TableHead", Model)
+    </thead>
+
+    <tbody id="data">
+        @Html.Partial("_TableBody", Model)
+    </tbody>
+</table>
+@section GoToMainMenu{
+    @Html.Action("GoToMainMenu", "Workers")
+}

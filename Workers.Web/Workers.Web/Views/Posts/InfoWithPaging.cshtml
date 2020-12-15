@@ -1,0 +1,17 @@
+﻿@model IEnumerable<WorkersInfo.Entities.Post>
+@{
+    ViewBag.Title = "InfoWithPaging";
+}
+
+<h2>Посади</h2>
+@foreach (var m in Model)
+{
+    <div class="row panel" style="background:none">
+        <div class="col-xs-12">
+            <h3><strong>@m.Name</strong></h3>
+        </div>
+    </div>
+}
+@section GoToMainMenu{
+    @Html.Action("GoToMainMenu", "Posts")
+}

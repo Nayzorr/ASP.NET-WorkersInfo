@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Workers.Web.Models.WorkerSelectionModel>
+@foreach (var item in Model)
+{
+
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Exp)
+        </td>
+        <td>
+            @Html.ActionLink("Редагувати", "Edit", new { id = item.Id }, new { @class = "btn btn-warning btn-xs" }) |
+            @Html.ActionLink("Детальніше", "Details", new { id = item.Id }, new { @class = "btn btn-warning btn-xs" }) |
+            @Html.ActionLink("Видалити", "Delete", new { id = item.Id }, new { @class = "btn btn-warning btn-xs" })
+        </td>
+    </tr>
+
+
+}

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WorkersInfo.Data.DataContext">
+    <Position X="0.5" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>RCAAgJAAAAAQAAAABAAAAAAAAAAAAAAAAAggAABAAAI=</HashCode>
+      <FileName>Data\DataContext.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dataSet" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WorkersInfo.Data.DataSet">
+    <Position X="4" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAABgAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Data\DataSet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WorkersInfo.Data.StaticDataContext">
+    <Position X="4" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QAAAgJAAAAAAAAAABAAAAAAAAAAAAAAAAABgAIAAAAA=</HashCode>
+      <FileName>Data\StaticDataContext.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dataContext" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WorkersInfo.Entities.CountingEntity&lt;T&gt;">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAgA=</HashCode>
+      <FileName>Entities\CountingEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkersInfo.Entities.Post">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAhAASAIAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Post.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkersInfo.Entities.Worker">
+    <Position X="6" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABCAAAAAAAAAAAAKAAAAAwACAAEAAgAAAAAAAAAAgA=</HashCode>
+      <FileName>Entities\Worker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkersInfo.IO.XmlIOController">
+    <Position X="8" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAgIAAAAEAAAAAAAAAAAAAAAAgEAAAAAEAAAAAAAQ=</HashCode>
+      <FileName>IO\XmlIOController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="WorkersInfo.Data.Interfaces.IDataSet">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Data\Interfaces\IDataSet.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

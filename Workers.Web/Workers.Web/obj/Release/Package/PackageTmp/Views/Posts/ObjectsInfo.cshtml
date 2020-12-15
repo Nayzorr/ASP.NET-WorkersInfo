@@ -1,0 +1,27 @@
+﻿@model IEnumerable<WorkersInfo.Entities.Post>
+
+@{
+    ViewBag.Title = "Посади";
+}
+
+<h2>Посади</h2>
+
+@foreach (var m in Model)
+{
+    <div class="row panel" style="background:none">
+        <div class="col-xs-12">
+            @Html.InfoHeader(m.Name)
+            @Html.ValueInfo("Код", m.Code)
+            @Html.ValueInfo("Штатні одиниці", m.State_Units)
+            @if (!string.IsNullOrWhiteSpace(m.Notice))
+            {
+                @Html.StringInfo("Опис:")
+                @Html.Descriptive_Block(m.Notice)
+            }
+
+        </div>
+    </div>
+}
+@section GoToMainMenu{
+    @Html.Action("GoToMainMenu", "Posts")
+}

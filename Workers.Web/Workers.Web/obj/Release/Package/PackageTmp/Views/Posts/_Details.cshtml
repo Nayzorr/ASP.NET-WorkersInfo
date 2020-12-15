@@ -1,0 +1,68 @@
+﻿@model Workers.Web.Models.PostViewModel
+
+@{
+    ViewBag.Title = "_Details";
+}
+
+
+<script type="text/javascript">
+    function OnSuccess(data) {
+        var info = $('#info');
+        info.empty();
+        for (var i = 0; i < data.length; i++) {
+            info.append('<p>' + data[i] + '</p>');
+        }
+    }
+</script>
+<h2>Детальна інформація</h2>
+<div>
+    <h4>Посада</h4>
+    <hr />
+    <dl class="dl-horizontal" style="background:none">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.State_Units)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.State_Units)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |*@
+    @Html.ActionLink("Назад до списку", "Index" ,null, new { @class = "btn btn-warning btn-sm" })
+</p>
+<div id="info">
+    @using (Ajax.BeginForm("JsonInfo",
+        new AjaxOptions
+        {
+            OnSuccess = "OnSuccess",
+            LoadingElementId = "loading",
+            LoadingElementDuration = 1000
+        }))
+    {
+        @Html.Hidden("id", Model.Id)
+        <input type="submit" value="Опис" class="btn btn-warning btn-sm" />
+    }
+    <div id="loading" class="load" style="display:none">
+        <p>Завантаження даних...</p>
+    </div>
+    <hr />
+</div>

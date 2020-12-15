@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="panel panel-default" style="margin-top:3% ; background:none">
+    <div class="panel-heading">
+        <h2 class="panel-title">Працівники</h2>
+    </div>
+    <div class="panel panel-body"style="background:none">
+        <p class="lead">
+            @Html.ActionLink("Детальна інформація про працівників", "ObjectsInfo", "Workers",null, new { @class = "btn btn-block btn-warning btn-lg" })
+        </p>
+        <p class="lead">
+            @Html.ActionLink("Переглянути працівників за їх посадами", "WorkersByPostInfo", "Workers", null, new { @class = "btn btn-block btn-warning btn-lg" })
+        </p>
+        <p class="lead">
+            @Html.ActionLink("Переглянути у вигляді таблиці із застосуванням фільтрів", "Selection", "Workers", null, new { @class = "btn btn-block btn-warning btn-lg" })
+        </p>
+        <p class="lead">
+            @Html.ActionLink("Перегляд за абеткою", "BrowseByLetter", "Workers", null, new { @class = "btn btn-block btn-warning btn-lg" })
+        </p>
+        <p class="lead">
+            @Html.ActionLink("Список працівників", "List", null, new { @class = "btn btn-block btn-warning btn-lg" })
+        </p>
+        <p class="lead">
+            @Html.ActionLink("Перегляд працівників", "Browse", null, new { @class = "btn btn-block btn-warning btn-lg" })
+        </p>
+        <p class="lead">
+            @Html.ActionLink("Редагування даних про працівників", "Index", "WorkersCrud", null, new { @class = "btn btn-block btn-warning btn-lg" })
+        </p>
+    </div>
+    
+</div>
+

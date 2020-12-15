@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Workers.Web.Models.WorkerTableModel>
+
+@{
+    ViewBag.Title = "Працівники";
+}
+
+@section GoToMainMenu{
+    @Html.Action("GoToMainMenu", "Workers")
+}
+
+<div class="row panel" style="background:none">
+    <div id="parameters" class="col-sm-5 col-md-4 col-lg-3">
+        <h3>Параметри</h3>
+        @Html.Partial("_SelectionForm")
+    </div>
+    <div class="col-sm-7 col-md-8 col-lg-9">
+        <h2>Працівники</h2>
+        <table class="table">
+            <thead>
+                @Html.Partial("_TableHead", Model)
+            </thead>
+            <tbody id="data">
+                @Html.Partial("_TableBody", Model)
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+

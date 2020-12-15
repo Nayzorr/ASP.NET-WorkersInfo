@@ -1,0 +1,27 @@
+﻿@model IEnumerable<WorkersInfo.Entities.Worker>
+@{
+    ViewBag.Title = "WorkersByPostInfo";
+    Layout = "~/Views/Shared/_CategoryLayout.cshtml";
+}
+@section GoToMainMenu{
+    @Html.Action("GoToMainMenu", "Workers")
+}
+
+<h2>Працівники та посади</h2>
+
+@foreach (var m in Model)
+{
+    <div class="row panel"style="background:none">
+        <div class="col-xs-12">
+            <h3>
+                <strong>@m.Name</strong>
+            </h3>
+            @Html.ValueInfo("Посада", m.Post.Name)
+            @Html.ValueInfo("Підрозділ", m.Unit)
+            @Html.ValueInfo("Стаж", m.Exp)
+        </div>
+    </div>
+}
+
+@section NavMenu{
+    @Html.Action("WorkersByPosts_Menu", "Navigation", new { categoryName = ViewBag.SelectedCategoryName })}

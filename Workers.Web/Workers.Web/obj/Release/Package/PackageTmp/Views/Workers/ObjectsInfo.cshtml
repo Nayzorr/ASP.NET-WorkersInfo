@@ -1,0 +1,27 @@
+﻿@model IEnumerable<WorkersInfo.Entities.Worker>
+
+@{
+    ViewBag.Title = "Працівники";
+}
+@section GoToMainMenu{
+    @Html.Action("GoToMainMenu", "Workers")
+}
+
+<h2>Працівники</h2>
+@foreach (var m in Model)
+{
+    <div class="row panel"style="background:none">
+        <div class="col-xs-12">
+            @Html.InfoHeader(m.Name)
+            @Html.ValueInfo("Посада", m.Post.Name)
+            @Html.ValueInfo("Підрозділ", m.Unit)
+            @Html.ValueInfo("Стаж", m.Exp)
+            @if (!string.IsNullOrWhiteSpace(m.Kharakteristika))
+            {
+                @Html.StringInfo("Характеристика:")
+                @Html.Descriptive_Block(m.Kharakteristika)
+            }
+        </div>
+    </div>
+
+}

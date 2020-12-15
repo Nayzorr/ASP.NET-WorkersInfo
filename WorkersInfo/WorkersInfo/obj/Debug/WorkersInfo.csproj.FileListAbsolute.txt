@@ -1,0 +1,6 @@
+E:\ASP_NET\MY_LABS\WorkersInfo\WorkersInfo\bin\Debug\WorkersInfo.dll
+E:\ASP_NET\MY_LABS\WorkersInfo\WorkersInfo\bin\Debug\WorkersInfo.pdb
+E:\ASP_NET\MY_LABS\WorkersInfo\WorkersInfo\obj\Debug\WorkersInfo.csprojAssemblyReference.cache
+E:\ASP_NET\MY_LABS\WorkersInfo\WorkersInfo\obj\Debug\WorkersInfo.csproj.CoreCompileInputs.cache
+E:\ASP_NET\MY_LABS\WorkersInfo\WorkersInfo\obj\Debug\WorkersInfo.dll
+E:\ASP_NET\MY_LABS\WorkersInfo\WorkersInfo\obj\Debug\WorkersInfo.pdb

@@ -1,0 +1,55 @@
+﻿@model Workers.Web.Models.PostEditingModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Видалення</h2>
+
+<h3>Ви впевнені що хочете видалити цей об'єкт?</h3>
+<div> 
+    <hr />
+    <dl class="dl-horizontal" style="background:none">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.State_Units)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.State_Units)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notice)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Видалити" class="btn btn-warning btn-sm" /> |
+            @Html.ActionLink("Назад до списку", "Index", null, new { @class = "btn btn-warning btn-sm" })
+        </div>
+    }
+</div>

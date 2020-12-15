@@ -1,0 +1,6 @@
+E:\ASP_NET\WEB_KP\WorkersInfo\bin\Release\WorkersInfo.dll
+E:\ASP_NET\WEB_KP\WorkersInfo\bin\Release\WorkersInfo.pdb
+E:\ASP_NET\WEB_KP\WorkersInfo\obj\Release\WorkersInfo.csprojAssemblyReference.cache
+E:\ASP_NET\WEB_KP\WorkersInfo\obj\Release\WorkersInfo.csproj.CoreCompileInputs.cache
+E:\ASP_NET\WEB_KP\WorkersInfo\obj\Release\WorkersInfo.dll
+E:\ASP_NET\WEB_KP\WorkersInfo\obj\Release\WorkersInfo.pdb

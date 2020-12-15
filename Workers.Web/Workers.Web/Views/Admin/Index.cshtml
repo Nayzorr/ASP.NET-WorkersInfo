@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Редагування даних сутності</h2>
+
+<div class="row panel">
+    @Html.ActionLink("Редагувати дані про працівників", "Index", "WorkersCrud", null, new { @class = "btn btn-block btn-warning btn-lg" })
+</div>
+
+<div class="row panel">
+    @Html.ActionLink("Редагувати дані про посади", "Index", "PostsCrud", null, new { @class = "btn btn-block btn-warning btn-lg" })
+</div>

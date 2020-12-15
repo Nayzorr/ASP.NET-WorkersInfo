@@ -1,0 +1,14 @@
+﻿@model string
+    @if (string.IsNullOrWhiteSpace(Model))
+    {
+        @:(Дані відсутні)
+    }
+    else
+    {
+        <blockquote>
+            <p class="lead">
+                @Model
+            </p>
+        </blockquote>
+    }
+

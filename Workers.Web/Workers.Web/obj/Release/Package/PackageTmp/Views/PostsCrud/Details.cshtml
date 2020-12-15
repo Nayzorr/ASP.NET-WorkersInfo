@@ -1,0 +1,49 @@
+﻿@model Workers.Web.Models.PostEditingModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Детальна інформація</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal" style="background:none">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.State_Units)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.State_Units)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Редагувати", "Edit", new { id = Model.Id }, new { @class = "btn btn-warning btn-sm" }) |
+    @Html.ActionLink("Назад до списку", "Index", null, new { @class = "btn btn-warning btn-sm" })
+</p>

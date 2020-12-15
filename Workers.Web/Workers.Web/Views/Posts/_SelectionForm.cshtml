@@ -1,0 +1,25 @@
+﻿
+@using (Ajax.BeginForm("_SelectData", new AjaxOptions
+{
+    UpdateTargetId = "data",
+    LoadingElementId = "loading",
+    LoadingElementDuration = 1000
+}))
+{
+    <p>
+        Початок назви<br />
+        <input type="text" name="selName" />
+    </p>
+    <p>
+        Штатні одиниці<br />
+        від <br /><input type="text" name="state_units_From" /><br />
+        до <br /><input type="text" name="state_units_To" />
+    </p>
+    <p>
+        <input type="submit" value="Відібрати" class="btn btn-warning btn-sm" />
+    </p>
+    <div id="loading" class="load" style="display:none">
+        <p>Завантаження даних...</p>
+    </div>
+
+}

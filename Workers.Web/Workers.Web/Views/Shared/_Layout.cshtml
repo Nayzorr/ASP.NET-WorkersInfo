@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - WorkersInfo</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+</head>
+<body style="background-color: #f2f2f2">
+    <header class="nav navbar-inverse navbar-fixed-top">
+        <a class="navbar-brand hidden-xs hidden-sm" href="#">ПО Працівники: Інформація про працівників та їх посади</a>
+        <a class="navbar-brand visible-sm hidden-xs" href="#">Працівники:</a>
+        <a class="navbar-brand visible-xs" href="#">Працівники:</a>
+        <ul class="nav navbar-nav navbar-right">
+            <li style="float:left">
+                <a href="~/Home/EntityList">
+                    <span class="glyphicon glyphicon-list " style="color:orange"></span>
+                    <span class="hidden-xs">Сутності ПО</span>
+                </a>
+            </li>
+            <li style="float:left">
+                <a href="~/Admin/Index" class="text-warning">
+                    <span class="glyphicon glyphicon-pencil" style="color:orange"></span>
+                    <span class="hidden-xs">Адмін-панель</span>
+                </a>
+            </li>
+            <li style="float:left">
+                @if (User.Identity.IsAuthenticated)
+                {
+                <a href="~/Account/Logoff" class="text-warning">
+                    <span class="glyphicon glyphicon-user" style="color:orange"></span>
+                    Увійти/Реєстрація
+                </a>
+                }
+                @if (!User.Identity.IsAuthenticated)
+                {
+                    <a href="~/Account/Login" class="text-warning">
+                        <span class="glyphicon glyphicon-user" style="color:orange"></span>
+                      Увійти/Реєстрація
+                    </a>
+                }
+            </li>
+        </ul>
+    </header>
+
+    <div class="container body-content">
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-success">@TempData["Message"]</div>
+        }
+        @if (TempData["CannotToDelete"] != null)
+        {
+            <div class="alert alert-danger">@TempData["CannotToDelete"]</div>
+        }
+        @if (TempData["NoAdmin"] != null)
+        {
+            <div class="alert alert-warning">@TempData["NoAdmin"]</div>
+        }
+        @RenderSection("GoToMainMenu", false)
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - WorkersInfo</p>
+            @RenderSection("Footer", false)
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+</body>
+</html>

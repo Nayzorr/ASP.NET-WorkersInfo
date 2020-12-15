@@ -1,0 +1,26 @@
+﻿@using Workers.Web.Controllers
+@model IEnumerable<Workers.Web.Models.WorkerInfoModel>
+
+@{
+    ViewBag.Title = "BrowseByLetter";
+}
+@section GoToMainMenu{
+    @Html.Action("GoToMainMenu", "Workers")
+}
+
+<h2>Перегляд за абеткою</h2>
+
+@*@Html.Partial("_BrowseData",Model)*@
+<div class="ajaxLink">
+    @foreach (string letter in ViewBag.Letters as IEnumerable<string>)
+    {
+        @Ajax.ActionLink(letter, "_GetDataByLetter",
+       new { selLetter = letter },
+       new AjaxOptions { UpdateTargetId = "data", LoadingElementId = "loading", LoadingElementDuration = 1000 },
+       new { @class = "btn btn-warning" })
+    }
+</div>
+<div id="loading" class="load" style="display:none">Завантаження даних...</div>
+<div id="data">
+    @Html.Action("_GetDataByLetter", new { selLetter = @WorkersController.ALL_PAGE_LINK_NAME })
+</div>

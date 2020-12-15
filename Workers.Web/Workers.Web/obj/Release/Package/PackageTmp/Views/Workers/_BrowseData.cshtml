@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Workers.Web.Models.WorkerInfoModel>
+
+
+@foreach (var m in Model)
+{
+    <div class="row panel"style="background:none">
+        <div class="col-xs-12">
+            <h3><strong>@m.Name</strong></h3>
+            <strong class="lead">Посада:@m.Post</strong><br />
+            <strong class="lead">Підрозділ:@m.Unit</strong><br />
+            <strong class="lead">Стаж:@m.Exp</strong><br />
+            @Html.DescriptiveInfo(m.Info)
+        </div>
+    </div>
+}

@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Workers.Web.Models.PostInfoModel>
+
+
+@foreach (var m in Model)
+{
+    <div class="row panel" style="background:none">
+        <div class="col-xs-12">
+            <h3><strong>@m.Name</strong></h3>
+            <strong class="lead">Код:@m.Code</strong><br />         
+            <strong class="lead">Штатні одиниці:@m.State_Units</strong><br />
+            @Html.DescriptiveInfo(m.Info)
+        </div>
+    </div>
+}

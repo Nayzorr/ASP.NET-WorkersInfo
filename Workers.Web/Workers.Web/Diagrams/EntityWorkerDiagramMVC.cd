@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Workers.Web.Controllers.WorkersController">
+    <Position X="5.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgghJAAAAAAAAAAQAAAAABBQAQAOEQEAEAEAAAQDI=</HashCode>
+      <FileName>Controllers\WorkersController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="objects" />
+      <Field Name="workerInfoModels" />
+      <Field Name="workerTableModels" />
+      <Field Name="workerViewModels" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Workers.Web.Models.WorkerInfoModel">
+    <Position X="1" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAEAAAIAAAAAQACAAAAAAAAAAAQEAAAAA=</HashCode>
+      <FileName>Models\WorkerInfoModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Workers.Web.Models.WorkerTableModel">
+    <Position X="1" Y="3.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAIAAAAAQACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\WorkerTableModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Workers.Web.Models.WorkerViewModel">
+    <Position X="8.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAIAAAAIAAAAAQACAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\WorkerViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkersInfo.Entities.Worker">
+    <Position X="8.5" Y="3.5" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

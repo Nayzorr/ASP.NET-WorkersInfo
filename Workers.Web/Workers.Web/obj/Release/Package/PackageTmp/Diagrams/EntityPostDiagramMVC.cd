@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Workers.Web.Controllers.PostsController">
+    <Position X="3.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAgIggIAAAAEAAAABQAAAAEBAAAQAMAQEAEAEAAAQDI=</HashCode>
+      <FileName>Controllers\PostsController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="postInfoModels" />
+      <Field Name="postTableModels" />
+      <Field Name="postViewModels" />
+      <Field Name="posts" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Workers.Web.Models.PostViewModel">
+    <Position X="0.5" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAIAABAAAAhAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\PostViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Workers.Web.Models.PostTableModel">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAhAAQAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Models\PostTableModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Workers.Web.Models.PostInfoModel">
+    <Position X="6.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACEAAAAAAAAAAAAAAhAAQAAAAAAAAAAAAAQEAAAAA=</HashCode>
+      <FileName>Models\PostInfoModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkersInfo.Entities.Post">
+    <Position X="6.25" Y="3.25" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

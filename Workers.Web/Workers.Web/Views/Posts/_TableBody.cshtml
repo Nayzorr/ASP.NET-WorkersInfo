@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Workers.Web.Models.PostTableModel>
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.State_Units)
+        </td>
+    </tr>
+}

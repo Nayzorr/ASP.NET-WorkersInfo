@@ -1,0 +1,30 @@
+﻿@model Workers.Web.Models.Authentication.LogOfModel
+
+@{
+    ViewBag.Title = "Logoff";
+}
+
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+           @User.Identity.Name
+        </dd>
+
+    </dl>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Вийти з аккаунту" class="btn btn-warning btn-sm" /> |
+        @Html.ActionLink("Повернутись на головну", "Index","Home", null, new { @class = "btn btn-warning btn-sm" })
+    </div>
+}

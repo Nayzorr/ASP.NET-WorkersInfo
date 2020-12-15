@@ -1,0 +1,19 @@
+﻿@model IEnumerable<WorkersInfo.Entities.Worker>
+@{
+    ViewBag.Title = "InfoWithPaging";
+}
+
+@section GoToMainMenu{
+    @Html.Action("GoToMainMenu", "Workers")
+}
+
+<h2>Працівники</h2>
+@foreach (var m in Model)
+{
+    <div class="row panel"style="background:none">
+        <div class="col-xs-12">
+            <h3><strong>@m.Name</strong></h3>
+        </div>
+    </div>
+}
+

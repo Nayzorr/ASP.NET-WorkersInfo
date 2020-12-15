@@ -1,0 +1,21 @@
+﻿@model IEnumerable<string>
+<h3>Посада</h3>
+
+@foreach (var link in Model)
+{
+    @Html.RouteLink(
+        link.Length < 20 ? link : link.Substring(0, 17) + "...",
+        new
+            {
+                controller = "Workers",
+            action = "WorkersByPostInfo",
+            categoryName = link
+        },
+        new
+            {
+            @class = "btn btn-block btn-warning btn-lg btn-nav_menu"
+                + (link == ViewBag.SelectedCategoryName ? " btn-primary" : "")
+        })
+}
+
+

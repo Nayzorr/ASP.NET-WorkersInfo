@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Workers.Web.Models.PostViewModel>
+
+@{
+    ViewBag.Title = "Перегляд";
+}
+<script type="text/javascript">
+    function OnSuccess(data) {
+        var info = $('#info' + data.Id);
+        info.empty();
+        //if (data.Info == null)
+        //    return;
+        for (var i = 0; i < data.Info.length; i++) {
+            info.append('<p class="lead">' + data.Info[i] + '</p>');
+        }
+    }
+</script>
+<h2>Перегляд</h2>
+@foreach (var m in Model)
+{
+    <div class="row panel" style="background:none">
+        <div class="col-xs-12">
+            <h3>
+                <strong>@m.Name</strong>
+            </h3>
+            @Html.ValueInfo("Код", m.Code)
+            @Html.ValueInfo("Штатні одиниці", m.State_Units)
+            @if (m.HasInfo)
+            {
+                <hr />
+                <div id=@string.Concat("info",@m.Id)>
+                    @using (Ajax.BeginForm("JsonIdInfo", new AjaxOptions { OnSuccess = "OnSuccess" }))
+                    {
+                        @Html.Hidden("id", @m.Id)
+                        <input type="submit" value="Опис" class="btn btn-warning btn-sm" />
+                    }
+                </div>
+                <hr />
+            }
+        </div>
+    </div>
+}
+@section GoToMainMenu{
+    @Html.Action("GoToMainMenu", "Posts")
+}
+

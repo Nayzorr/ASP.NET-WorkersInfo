@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EntityList</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+</head>
+<div class="navbar navbar-inverse">
+    <a class="navbar-brand hidden-xs" href="/">
+        ПО "Працівники": інформація про працівників
+    </a>
+    <a class="navbar-brand visible-xs" href="/">ПО "Працівники"</a>
+</div>
+<body style="background-color: #f2f2f2">
+    <div class="row panel" style="background:none">
+        @Html.ActionLink("Працівники",
+            "Index", "Workers", null,
+            new { @class = "btn btn-block btn-warning btn-lg" })
+        @Html.ActionLink("Посади",
+            "Index", "Posts", null,
+            new { @class = "btn btn-block btn-warning btn-lg" })
+
+    </div>
+</body>
+
+</html>
